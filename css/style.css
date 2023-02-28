@@ -1,0 +1,268 @@
+/* Genral Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #181719;
+  color: #fff;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+/* Genral Rules */
+header {
+  margin-top: 50px;
+}
+header .container {
+  display: flex;
+  flex-direction: column;
+  gap: 177px;
+}
+header .container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container nav span.menu-icon {
+  font-size: 40px;
+  cursor: pointer;
+
+  display: none;
+
+  z-index: 9999999999;
+
+  transition: all 0.3s;
+}
+header .container nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 86px;
+
+  list-style: none;
+}
+header .container nav .logo {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+  padding: 8px;
+  border: 1px solid #fff;
+}
+header .container nav ul a {
+  text-decoration: none;
+  color: #fff;
+
+  position: relative;
+}
+header .container nav ul a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+
+  transition: all 0.2s;
+}
+header .container nav ul a:hover::before {
+  width: 100%;
+}
+header .container nav ul li:nth-child(1) a::before {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 84px;
+}
+/* Left content */
+.hero .left-content h2 {
+  font-size: 48px;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.hero .left-content p {
+  font-size: 24px;
+  width: 410px;
+  font-weight: 400;
+  line-height: 29.26px;
+
+  margin-bottom: 48px;
+}
+.hero .left-content button {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  cursor: pointer;
+}
+.hero .left-content button span {
+  gap: 14px;
+}
+
+/* Right content */
+.hero .right-content {
+  position: relative;
+}
+.hero .right-content img.main-img {
+  width: 100%;
+}
+.hero .right-content .info {
+  position: absolute;
+  bottom: -85px;
+  right: 64px;
+  background-color: #181719;
+
+  width: 410px;
+  padding-top: 18px;
+  padding-left: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.hero .right-content .info > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero .right-content .info > div img {
+  display: block;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.hero .right-content .info > div h5 {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+.hero .right-content .info > div p {
+  font-size: 12px;
+  color: #828282;
+}
+.hero .right-content .info > p {
+  font-size: 24px;
+  font-family: 'Lora', serif;
+}
+/* Footer */
+footer {
+  text-align: center;
+  color: #a9a9a9;
+  margin-top: 115px;
+  margin-bottom: 30px;
+}
+footer a {
+  text-decoration: none;
+  color: #a9a9a9;
+  font-weight: bold;
+}
+
+@media (max-width: 1080px) {
+  .hero .right-content .info {
+    right: 32px;
+
+    width: 350px;
+  }
+}
+@media (max-width: 992px) {
+  header .container {
+    gap: 45px;
+  }
+  header .container .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+  header .container .hero .left-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  /* Left content */
+  .hero .left-content h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  .hero .left-content p {
+    font-size: 14px;
+    line-height: 17px;
+    width: 250px;
+
+    margin-bottom: 25px;
+  }
+  .hero .left-content button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  header {
+    margin-top: 20px;
+  }
+  header .container nav span.menu-icon {
+    display: block;
+  }
+  .hero .right-content .info {
+    width: 300px;
+    right: 10px;
+  }
+  .hero .right-content .info > div {
+    gap: 14px;
+  }
+  .hero .right-content .info > div img {
+    width: 40px;
+    height: 40px;
+  }
+  .hero .right-content .info > div h5 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 6px;
+  }
+  .hero .right-content .info > div p {
+    font-size: 10px;
+  }
+  .hero .right-content .info > p {
+    font-size: 18px;
+  }
+
+  header .container nav ul {
+    position: fixed;
+    top: 0;
+    right: -200%;
+
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background-color: #181719;
+    z-index: 9999999999;
+    transition: all 0.3s;
+  }
+}
+header .container nav ul.open {
+  right: 0;
+}
