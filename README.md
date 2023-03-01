@@ -28,7 +28,6 @@
 
 - [Built With](#built-with)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 
 ### Built With
